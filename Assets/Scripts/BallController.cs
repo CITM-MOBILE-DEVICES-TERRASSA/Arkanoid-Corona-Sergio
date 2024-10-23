@@ -70,4 +70,15 @@ public class BallController : MonoBehaviour
             }
         }
     }
+    public void ResetBall()
+    {
+        //Para volver a colocar la pelota sobre la plataforma
+        //rb.isKinematic = true;
+        //onPlatform = true;
+
+
+        rb.isKinematic = true;
+        transform.position = new Vector3(platform.position.x, platform.position.y + 0.5f, 0f);
+        onPlatform = true;
+    }
 }
