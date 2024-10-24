@@ -7,12 +7,18 @@ using TMPro;
 public class HUD : MonoBehaviour
 {
     public TextMeshProUGUI livesText;
-
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScoreText;
     // Start is called before the first frame update
     void Start()
     {
         LifeManager.OnLivesChange += UpdateLives;
+        ScoreManager.OnScoreChange += UpdateScoreUI;
+
         UpdateLives(3);
+
+        UpdateScoreUI(ScoreManager.Instance.Score);
+        highScoreText.text = "High Score: " + ScoreManager.Instance.HighScore;
     }
 
     // Update is called once per frame
@@ -22,13 +28,19 @@ public class HUD : MonoBehaviour
     }
     public void UpdateLives(int lives)
     {
-        livesText.text = "Lives: " + lives; // Actualizar el texto de las vidas
+        livesText.text = "Lives: " + lives;
+    }
+
+    public void UpdateScoreUI(int score)
+    {
+        scoreText.text = "Score: " + score;
     }
 
     void OnDestroy()
     {
-        // Desregistrar suscripciones para evitar fugas de memoria
         LifeManager.OnLivesChange -= UpdateLives;
+        ScoreManager.OnScoreChange -= UpdateScoreUI;
+
     }
 }
 

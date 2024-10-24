@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
+    public int points = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class BlockController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
+            ScoreManager.Instance.AddScore(points);
+
             Destroy(gameObject);
         }
     }
