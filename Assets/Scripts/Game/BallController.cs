@@ -18,12 +18,12 @@ public class BallController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.isKinematic = true; // Prevent movement until launched
+        rb.isKinematic = true;
     }
 
     void Update()
     {
-        // Keep the ball on the platform if not launched
+
         if (onPlatform)
         {
             transform.position = new Vector3(platform.position.x, platform.position.y + 0.5f, 0f);
@@ -34,7 +34,7 @@ public class BallController : MonoBehaviour
             }
         }
 
-        // Ball velocity is > minimum?
+
         if (!onPlatform && rb.velocity.magnitude < minSpeed)
         {
             rb.velocity = rb.velocity.normalized * minSpeed;
@@ -50,35 +50,33 @@ public class BallController : MonoBehaviour
         reboundCount = 0;
     }
 
-    void OnCollisionEnter2D(Collision2D collision) // If ball hit brick or wall
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (rb.velocity.magnitude > minSpeed)
         {
             reboundCount++;
 
-            if (reboundCount >= reboundsToIncrement) // If reboundCount reach X Rebounds
+            if (reboundCount >= reboundsToIncrement)
             {
-                rb.velocity *= (1 + speedIncrement); // Increase speed
+                rb.velocity *= (1 + speedIncrement);
 
-                // Limit the maximum speed
+
                 if (rb.velocity.magnitude > maxSpeed)
                 {
                     rb.velocity = rb.velocity.normalized * maxSpeed;
                 }
 
-                reboundCount = 0; // Reset rebound count
+                reboundCount = 0;
             }
         }
     }
     public void ResetBall()
     {
-        //Para volver a colocar la pelota sobre la plataforma
-        //rb.isKinematic = true;
-        //onPlatform = true;
-
 
         rb.isKinematic = true;
         transform.position = new Vector3(platform.position.x, platform.position.y + 0.5f, 0f);
         onPlatform = true;
+        Debug.Log("Ball position reset to platform.");
+
     }
 }

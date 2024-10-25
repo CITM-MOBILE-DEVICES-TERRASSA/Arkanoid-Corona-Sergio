@@ -9,23 +9,19 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         LifeManager.OnLivesChange += UpdateLives;
         ScoreManager.OnScoreChange += UpdateScoreUI;
+    }
 
-        UpdateLives(3);
-
+    void Start()
+    {
+        UpdateLives(LifeManager.Instance.Lives);
         UpdateScoreUI(ScoreManager.Instance.Score);
         highScoreText.text = "High Score: " + ScoreManager.Instance.HighScore;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void UpdateLives(int lives)
     {
         livesText.text = "Lives: " + lives;
@@ -36,7 +32,7 @@ public class HUD : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         LifeManager.OnLivesChange -= UpdateLives;
         ScoreManager.OnScoreChange -= UpdateScoreUI;

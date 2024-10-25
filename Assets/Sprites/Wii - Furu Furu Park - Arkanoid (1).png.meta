@@ -441,7 +441,7 @@ TextureImporter:
         width: 320
         height: 441
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,6 +449,48 @@ TextureImporter:
       bones: []
       spriteID: f3313955aad447a41a67f57b2a307858
       internalID: -1701155914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wii - Furu Furu Park - Arkanoid (1)_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1
+        width: 312
+        height: 441
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2709d8c37052997419dc994fd53296fa
+      internalID: 1645302341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wii - Furu Furu Park - Arkanoid (1)_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1444
+        width: 13
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c11866c7d3470409d9c5b56461ccef
+      internalID: -1170715671
       vertices: []
       indices: 
       edges: []
@@ -480,6 +522,9 @@ TextureImporter:
       Red Block: -1611867360
       White Block: 1423378122
       Wii - Furu Furu Park - Arkanoid (1)_0: 784112118
+      Wii - Furu Furu Park - Arkanoid (1)_1: 1645302341
+      Wii - Furu Furu Park - Arkanoid (1)_2: -1170715671
+      Wii - Furu Furu Park - Arkanoid (1)_3: 346412226
       Yellow Block: -1023390844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

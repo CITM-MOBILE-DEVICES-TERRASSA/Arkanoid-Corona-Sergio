@@ -51,25 +51,12 @@ public class ScoreManager : MonoBehaviour
 
     private void SavePlayerData()
     {
-        Debug.Log("Saving player data..."); // Añadir esto para depurar
+        Debug.Log("Saving player data...");
         PlayerData data = new PlayerData
         {
             playerName = PlayerName,
             highScore = HighScore
         };
         JsonDataManager.SaveData(data);
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
