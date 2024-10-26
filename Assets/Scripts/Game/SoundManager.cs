@@ -4,7 +4,7 @@ public class SoundEffectManager : MonoBehaviour
 {
     public static SoundEffectManager Instance { get; private set; }
 
-    public AudioClip ballBounceSound;    // Sonido para el rebote de la bola
+    public AudioClip ballBounceSound;
     public AudioSource effectsSource;
 
     void Awake()

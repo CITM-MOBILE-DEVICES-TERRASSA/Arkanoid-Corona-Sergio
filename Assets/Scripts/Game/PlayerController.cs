@@ -80,9 +80,7 @@ public class Player : MonoBehaviour
     }
     void Shoot()
     {
-        // Lógica para disparar hacia arriba
-        // Aquí deberías instanciar un nuevo proyectil que se mueva hacia arriba
-        // Usa un prefab para el proyectil que se instanciará
+
     }
 
 }

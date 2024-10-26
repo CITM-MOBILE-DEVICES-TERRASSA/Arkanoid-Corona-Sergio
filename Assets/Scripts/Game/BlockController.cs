@@ -41,7 +41,7 @@ public class BlockController : MonoBehaviour
                 GameController.Instance.BrickDestroyed();
             }
 
-            DropPowerUp();
+            //DropPowerUp();
 
             Destroy(gameObject);
         }
@@ -49,14 +49,13 @@ public class BlockController : MonoBehaviour
         {
             if (damageSprites != null && damageSprites.Length > 0)
             {
-                UpdateBlockSprite();  // Cambia el sprite solo si hay sprites en damageSprites
+                UpdateBlockSprite();
             }
         }
     }
 
     void UpdateBlockSprite()
     {
-        // Cambia el sprite en función de la vida actual (hitPoints)
         if (damageSprites != null && damageSprites.Length > 0) {
 
             int spriteIndex = Mathf.Clamp(hitPoints - 1, 0, damageSprites.Length - 1);
@@ -64,11 +63,11 @@ public class BlockController : MonoBehaviour
         }
     }
 
-    void DropPowerUp()
-    {
-        if (Random.value < dropChance)
-        {
-            Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
-        }
-    }
+    //void DropPowerUp()
+    //{
+    //    if (Random.value < dropChance)
+    //    {
+    //        Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
+    //    }
+    //}
 }

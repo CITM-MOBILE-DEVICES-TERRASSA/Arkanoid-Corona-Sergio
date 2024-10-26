@@ -87,7 +87,7 @@ public class LifeManager : MonoBehaviour
     }
     public void ResetLives()
     {
-        lives = 3; // O el número que desees
+        lives = 3;
         UpdateLives();
         Debug.Log("Lives have been reset to: " + lives);
     }
@@ -96,17 +96,15 @@ public class LifeManager : MonoBehaviour
         OnLivesChange?.Invoke(lives);
     }
 
-    public void UpdateBallReference() //Busca ball en la escena actual para asignarle su transform al ballStartPosition
+    public void UpdateBallReference()
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
         if (ball != null)
         {
             ballStartPosition = ball.transform;
-            //Debug.Log("Ball found and ballStartPosition updated: " + ball.name);
         }
         else
         {
-            //Debug.LogWarning("Ball not found! Ensure the Ball object has the 'Ball' tag.");
         }
     }
 

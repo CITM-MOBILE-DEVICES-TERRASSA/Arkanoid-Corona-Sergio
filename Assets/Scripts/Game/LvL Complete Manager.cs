@@ -13,7 +13,7 @@ public class LevelCompleteManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // Mantener entre escenas
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -24,21 +24,20 @@ public class LevelCompleteManager : MonoBehaviour
 
     public void ShowLevelCompletePanel()
     {
-        levelCompletePanel.SetActive(true);  // Mostrar el panel
-        Time.timeScale = 0;                     // Pausa el juego
+        levelCompletePanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void LoadNextLevel()
     {
-        levelCompletePanel.SetActive(false); // Ocultar el panel al cambiar de nivel
-        Time.timeScale = 1;                     // Reanuda el juego
+        levelCompletePanel.SetActive(false);
+        Time.timeScale = 1;
 
-        //int nextLevelIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        int nextLevelIndex = (SceneManager.GetActiveScene().buildIndex + 1) % 2; // Esto asume que solo hay 2 niveles
+        int nextLevelIndex = (SceneManager.GetActiveScene().buildIndex + 1) % 2;
 
         if (nextLevelIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(nextLevelIndex); // Cargar el siguiente nivel
+            SceneManager.LoadScene(nextLevelIndex);
         }
         else
         {
@@ -50,7 +49,7 @@ public class LevelCompleteManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         levelCompletePanel.SetActive(false);
-        Time.timeScale = 1;                     // Reanuda el juego
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -28,14 +28,13 @@ public class MainMenu : MonoBehaviour
     }
     void UpdateContinueButton()
     {
-        // Comprobar si hay vidas y puntaje diferentes de cero
         if (LifeManager.Instance.Lives > 0 && ScoreManager.Instance.Score > 0)
         {
-            continueButton.gameObject.SetActive(true); // Habilita el botón
+            continueButton.gameObject.SetActive(true);
         }
         else
         {
-            continueButton.gameObject.SetActive(false); // Deshabilita el botón
+            continueButton.gameObject.SetActive(false);
         }
     }
     void OnContinueGame()
@@ -48,12 +47,12 @@ public class MainMenu : MonoBehaviour
     void OnStartGame()
     {
         Debug.Log("Start Game Button Clicked");
-        GameController.Instance.StartGame(); // Llama al método para iniciar el juego
+        GameController.Instance.StartGame();
     }
 
     void OnQuitGame()
     {
         Debug.Log("Quit Button Clicked");
-        Application.Quit(); // Cierra la aplicación
+        Application.Quit();
     }
 }
