@@ -7,7 +7,8 @@ public class BlockController : MonoBehaviour
     public int points = 10;
     public int hitPoints = 1;
     public Sprite[] damageSprites;
-
+    public GameObject powerUpPrefab;
+    public float dropChance = 0.1f;
     private SpriteRenderer spriteRenderer;
 
     void Start()
@@ -37,8 +38,10 @@ public class BlockController : MonoBehaviour
 
             if (gameController != null)
             {
-                gameController.BrickDestroyed();
+                GameController.Instance.BrickDestroyed();
             }
+
+            DropPowerUp();
 
             Destroy(gameObject);
         }
@@ -58,6 +61,14 @@ public class BlockController : MonoBehaviour
 
             int spriteIndex = Mathf.Clamp(hitPoints - 1, 0, damageSprites.Length - 1);
             spriteRenderer.sprite = damageSprites[spriteIndex];
+        }
+    }
+
+    void DropPowerUp()
+    {
+        if (Random.value < dropChance)
+        {
+            Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
         }
     }
 }

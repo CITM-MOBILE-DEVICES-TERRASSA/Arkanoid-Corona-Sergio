@@ -52,6 +52,9 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+
+        SoundEffectManager.Instance.PlayBallBounceSound();
+
         if (rb.velocity.magnitude > minSpeed)
         {
             reboundCount++;

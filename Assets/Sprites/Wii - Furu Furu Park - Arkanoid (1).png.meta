@@ -495,6 +495,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wii - Furu Furu Park - Arkanoid (1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 963
+        width: 321
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3a32dc876f4544e9fea6f6c6c56a10
+      internalID: 346412226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wii - Furu Furu Park - Arkanoid (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1670
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ff654c96522f0428050b9d300db077
+      internalID: -1364733331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wii - Furu Furu Park - Arkanoid (1)_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1756
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb55fd02b3138943a585938a9657df3
+      internalID: -871268544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -525,6 +588,8 @@ TextureImporter:
       Wii - Furu Furu Park - Arkanoid (1)_1: 1645302341
       Wii - Furu Furu Park - Arkanoid (1)_2: -1170715671
       Wii - Furu Furu Park - Arkanoid (1)_3: 346412226
+      Wii - Furu Furu Park - Arkanoid (1)_4: -1364733331
+      Wii - Furu Furu Park - Arkanoid (1)_5: -871268544
       Yellow Block: -1023390844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

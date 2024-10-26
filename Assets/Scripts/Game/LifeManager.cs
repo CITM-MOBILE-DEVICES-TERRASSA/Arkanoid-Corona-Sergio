@@ -55,18 +55,16 @@ public class LifeManager : MonoBehaviour
             ResetBall();
         }
 
-        //else
-        //{
-        //    Debug.Log("Game Over");
-        //    // Notificar al GameController sobre el Game Over
-        //    GameController gameController = FindObjectOfType<GameController>();
-        //    if (gameController != null)
-        //    {
-        //        gameController.GameOver();
-        //    }
-        //}
-        // Aquí puedes implementar la lógica de "Game Over" (reiniciar el juego, mostrar una pantalla de fin, etc.)
-    
+        else
+        {
+            Debug.Log("Game Over");
+            GameController gameController = FindObjectOfType<GameController>();
+            if (gameController != null)
+            {
+                gameController.GameOver();
+            }
+        }
+
     }
     private void ResetBall()
     {
@@ -86,6 +84,12 @@ public class LifeManager : MonoBehaviour
                 Debug.LogError("BallController not found on ball!");
             }
         }
+    }
+    public void ResetLives()
+    {
+        lives = 3; // O el número que desees
+        UpdateLives();
+        Debug.Log("Lives have been reset to: " + lives);
     }
     private void UpdateLives()
     {
